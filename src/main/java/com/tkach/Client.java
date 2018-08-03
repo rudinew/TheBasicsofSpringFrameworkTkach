@@ -1,8 +1,5 @@
 package com.tkach;
 
-/**
- * Created by Rudoman on 03.08.2018.
- */
 public class Client {
     private String id;
     private String fullName;
