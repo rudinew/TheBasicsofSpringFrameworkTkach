@@ -15,10 +15,22 @@
         <constructor-arg ref="eventLogger"/>
     </bean>
 
+
     <bean id ="event" class="com.tkach.Event" scope ="prototype">
         <constructor-arg >
             <bean class="java.util.Date"/>
         </constructor-arg>
+
+    </bean>
+
+    <bean id ="fileEvent" class="com.tkach.FileEventLogger" init-method="init">
+        <constructor-arg value="d:/tkach.txt"/>
+
+    </bean>
+
+    <bean id ="casheFileEvent" class="com.tkach.CachFileEventLogger" destroy-method="destroy" >
+        <constructor-arg value="d:/tkach.txt"/>
+        <constructor-arg value="30"/>
 
     </bean>
 
